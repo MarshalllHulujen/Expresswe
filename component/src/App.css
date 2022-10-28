@@ -2,6 +2,34 @@
   text-align: center;
 }
 
+h1 {
+  color: white;
+}
+
+a {
+  border: none;
+  background-color: #ffffff00;
+  color: white;
+  cursor: pointer;
+  font-size: large;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
 #texts {
   background-color: #ffffff00;
   width: 1920px;
@@ -50,6 +78,12 @@ button {
   background-color: #ffffff00;
   color: white;
   cursor: pointer;
+}
+
+#first-name {
+  border: none;
+  width: 100px;
+  height: 25px;
 }
 
 #btn5 {
@@ -125,6 +159,19 @@ button {
   height: 1080px;
 }
 
+#sign-up {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 76.04%, rgba(0, 0, 0, 0.4) 100%), url("https://www.softcat.com/1258x1000/jpg/1016/1227/6530/woman_casual_coffee_mac_laptop_orange_top.webp");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  background-repeat: no-repeat;
+  width: 2100px;
+  height: 1080px;
+
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -179,6 +226,18 @@ button {
   padding-left: 100px;
   padding-top: 20px;
 }
+#text69 {
+  display: flex;
+  flex-direction: row;
+  font-weight: 600;
+  font-size: xx-large;
+  left: 80px;
+  top: -4px;
+  color: white;
+  padding-left: 100px;
+  padding-top: 20px;
+}
+
 #attributes {
   display: flex;
   flex-direction: column;

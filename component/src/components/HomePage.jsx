@@ -1,6 +1,7 @@
 import React from "react"
-import { SignIn } from "./SignIn";
 import { useRef } from "react";
+import { Link} from 'react-router-dom';
+
 
 export const Background = () => {
   const Email = useRef(null);
@@ -20,6 +21,7 @@ export const Background = () => {
               <button id='btn2'>Products</button>
               <button id='btn2'>Services</button>
               <button id='btn2'>Contact</button>
+              <Link to={"/SignIn"}> <p> Login </p> </Link>
               <button id='btn'>Get Access</button>
             </div>
           </div>

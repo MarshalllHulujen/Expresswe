@@ -1,13 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 import { Background } from './components/HomePage';
-import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import { SignIn } from './components/SignIn';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
-function App() {
+const App=()=> {
   return (
     <div id='Return'>
-      < Background/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Background/>} />
+        
+        <Route path="/SignIn" element={< SignIn/>} />
+    </Routes>
+  </BrowserRouter>
     </div>
   );
 }
