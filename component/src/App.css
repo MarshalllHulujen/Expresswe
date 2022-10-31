@@ -2,8 +2,50 @@
   text-align: center;
 }
 
+#first_name {
+  width: 200px;
+  height: 25px;
+}
+
+#last_name {
+  width: 200px;
+  height: 25px;
+}
+
 h1 {
   color: white;
+}
+
+#btn123456 {
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  color: white;
+  background-color: aqua;
+  margin-left: 10px;
+}
+
+h3 {
+  color: white;
+}
+
+#EmailSubmit {
+  border: none;
+  margin-left: 10px;
+  border-radius: 5px;
+  width: 70px;
+  height: 25px;
+  color: white;
+  background-color: aqua;
+}
+
+h3 {
+  color: #ffffff00;
+}
+
+#btisha {
+  display: block;
 }
 
 a {
@@ -117,6 +159,7 @@ button {
   font-weight: 500;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0);
+  padding-left: 10px;
 }
 
 #btn1 {
@@ -128,6 +171,7 @@ button {
   margin-left: 70px;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+  font-size: large;
 }
 
 #text2 {

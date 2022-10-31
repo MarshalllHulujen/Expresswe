@@ -25,21 +25,24 @@ export const SignIn = () => {
     <div id='sign-up'>
       <form onSubmit={handleSubmit}>
         <div id='text69'>team <div id='text2'></div></div>
-        <h1>UserName</h1>
+        <h1> Login </h1>
+        <h3>.</h3>
         <input
           ref={firstRef}
           id="first_name"
           name="first_name"
           type="text"
+          placeholder='type the username here....'
         />
-        <h1>Email</h1>
+        <h3>.</h3>
         <input
           ref={lastRef}
           id="last_name"
           name="last_name"
           type="email"
+          placeholder='type the email here...'
         />
-        <button type='submit'>Submit</button>
+        <button type='submit' id='btn123456'>Submit</button>
       </form>
     </div>
   );

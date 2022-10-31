@@ -9,7 +9,6 @@ const App=()=> {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Background/>} />
-        
         <Route path="/SignIn" element={< SignIn/>} />
     </Routes>
   </BrowserRouter>
