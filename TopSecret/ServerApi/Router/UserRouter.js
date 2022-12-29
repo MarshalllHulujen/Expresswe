@@ -1,13 +1,16 @@
-const express = require("express")
-const { userGetController, userPostController, userDeleteController, userPutController, usersDeleteController } = require("../controller/userController")
+const express = require("express");
+const {
+  userPostController,
+  userGetController,
+  userIdController,
+  userDeleteController,
+} = require("../controller/userController");
 
-const UserRouter = express.Router()
+const UserRouter = express.Router();
 
-UserRouter
-    .get("/user", userGetController )
-    .post("/user", userPostController )
-    .delete("/user/:id", userDeleteController )
-    .delete("/users", usersDeleteController)
-    .put("/user/:id", userPutController )
+UserRouter.get("/user", userGetController)
+  .get("/user/:id", userIdController)
+  .post("/user", userPostController)
+  .delete("/user/:id", userDeleteController);
 
-module.exports = UserRouter
+module.exports = UserRouter;
