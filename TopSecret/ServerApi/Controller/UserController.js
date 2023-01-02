@@ -3,14 +3,14 @@ const mongoose = require("mongoose");
 
 exports.userPostController = async (req, res) => {
   try {
-    const { username, password, email, gender } = req.body;
+    const { firstname, lastname, gender, email } = req.body;
     const result = await new User({
-      username: username,
-      password: password,
+      firstname: firstname,
+      lastname: lastname,
       gender: gender,
       email: email,
     }).save();
-    const Post = { $push: { post: result } };
+    const Post = { post: result };
     console.log(result);
     res.send(Post);
   } catch (err) {
