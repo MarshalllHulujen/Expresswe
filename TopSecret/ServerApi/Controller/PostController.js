@@ -5,11 +5,10 @@ const mongoose = require("mongoose");
 
 exports.postPostController = async (req, res) => {
   try {
-    const { post, userby, comment } = req.body;
+    const { post, userby } = req.body;
     const result = await new Post({
       post: post,
-      userby: await new User({ username: userby }),
-      comment: comment,
+      userby: userby,
     }).save();
     const dost = { $push: { data: result } };
     console.log(result);
