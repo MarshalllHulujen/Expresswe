@@ -3,7 +3,7 @@ const express = require("express");
 const {
   commentGetController,
   commentPostController,
-  commentPostIdController,
+  commentUpdateIdController,
   commentDeleteController,
   commentGetIdController,
   commentAddController,
@@ -13,7 +13,7 @@ const CommentRouter = express.Router();
 
 CommentRouter.get("/comment", commentGetController)
   .post("/comment", commentPostController)
-  .put("/post/:id", commentPostIdController)
+  .put("/post/:id", commentUpdateIdController)
   .post("/post/:id", commentAddController)
   .delete("/comment/:id", commentDeleteController)
   .get("/comment/:id", commentGetIdController);

@@ -20,7 +20,7 @@ exports.commentPostController = async (req, res) => {
   }
 };
 
-exports.commentPostIdController = async (req, res) => {
+exports.commentUpdateIdController = async (req, res) => {
   try {
     const { id } = req.params;
     const { userby, comment } = req.body;
