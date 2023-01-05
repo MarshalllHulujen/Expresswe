@@ -3,12 +3,10 @@ const mongoose = require("mongoose");
 
 exports.userPostController = async (req, res) => {
   try {
-    const { firstname, lastname, gender, email } = req.body;
+    const { password, email } = req.body;
     const result = await new User({
-      firstname: firstname,
-      lastname: lastname,
-      gender: gender,
       email: email,
+      password: password,
     }).save();
     const Post = { post: result };
     console.log(result);

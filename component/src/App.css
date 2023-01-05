@@ -485,3 +485,77 @@ button {
   width: 2000px;
   height: 400px;
 }
+
+#zidurbgrdg {
+  text-align: end;
+  padding: 40px;
+}
+
+
+#rugbn {
+  padding-top: 100px;
+}
+
+#text {
+  font-size: xx-large ;
+  font-weight: 700;
+  padding-top: 40px;
+  color: #02B589;
+}
+
+#drgnsedrthg {
+  padding-top: 40px;
+}
+
+#text2 {
+  padding-right: 10%;
+}
+
+#text3 {
+  padding-right: 12%;
+}
+
+#text4 {
+  padding-right: 7%;
+}
+
+#rgsefhgrtdhh {
+  padding-top: 10px;
+}
+
+#guibrgh {
+  padding-right: 10px;
+}
+
+#guibrgh {
+  border: grey solid 1px;
+  border-radius: 20px;
+  width: 300px;
+  height: 30px;
+}
+
+#dgtrhrh {
+  padding-top: 20px;
+}
+
+#zidurbgrdg {
+  color: #02B589;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+#dsrgjndrg {
+  border: none;
+  border-radius: 20px;
+  background-color: #02B589;
+  width: 320px;
+  height: 40px;
+  color: white;
+  font-size: x-large;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#dohinth {
+  padding-top: 5%;
+}
