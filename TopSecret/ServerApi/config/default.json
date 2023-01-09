@@ -1,0 +1,4 @@
+{
+    "mongoURI" : "mongodb+srv://Khulugen:Khulugen.1017>@cluster0.bwuaugr.mongodb.net/test",
+    "baseurl" : "http://localhost:8000"
+}
