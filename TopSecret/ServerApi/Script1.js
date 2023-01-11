@@ -2,17 +2,16 @@ const express = require("express");
 const cors = require("cors");
 const connectDatabase = require("./database/databse");
 const UserRouter = require("./Router/UserRouter");
-const url = require("./Router/url")
+const url = require("./Router/url");
 
 const port = 8000;
 
 const app = express();
 app.use(cors());
-app.use(express.json());
+app.use(express.json({ extented: false }));
 
-app.use(UserRouter);
-app.use(url)
-
+app.use(UserRouter, url);
+app.use(url);
 
 // app.get("/users/:id", (req, res) => {ç
 //   res.send(req.query.id);

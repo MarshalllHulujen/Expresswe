@@ -1,0 +1,8 @@
+POST http://localhost:8000/url
+Content-Type: application/json
+
+{
+    "longUrl": "https://devconnected.com/how-to-change-git-remote-origin/#:~:text=Change%20Git%20Remote%20URL,-In%20order%20to&text=For%20example%2C%20let's%20say%20that,would%20specify%20the%20new%20URL.&text=Congratulations%2C%20you%20successfully%20changed%20the%20URL%20of%20your%20Git%20remote!"
+}
+
+
