@@ -56,3 +56,9 @@ exports.UrlGetController = async (req, res) => {
     res.status(500).json(err.message);
   }
 };
+
+exports.UrlGeetController = async (req, res) => {
+  const result = await User.find();
+  res.send({ data: result });
+
+}
