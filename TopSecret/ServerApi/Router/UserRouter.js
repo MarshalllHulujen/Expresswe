@@ -1,4 +1,5 @@
 const express = require("express");
+const { TokenCheckerMiddleware } = require("../middleware")
 const {
   userPostController,
   userGetController,
@@ -9,8 +10,8 @@ const {
 
 const UserRouter = express.Router();
 
-UserRouter.get("/user", userGetController)
-  .get("/user/:id", userIdController)
+UserRouter.get("/user", [TokenCheckerMiddleware], userGetController)
+  .get("/user/:id", [TokenCheckerMiddleware], userIdController)
   .post("/user", userPostController)
   .delete("/user/:id", userDeleteController)
   .get("/userlogin/:email/:password", userLogin);
