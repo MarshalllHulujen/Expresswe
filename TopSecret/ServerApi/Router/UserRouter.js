@@ -11,7 +11,7 @@ const {
 
 const UserRouter = express.Router();
 
-UserRouter.get("/user", TokenCheckerMiddleware, userGetController)
+UserRouter.get("/user", userGetController)
   // .get("/user/:id", TokenCheckerMiddleware, userIdController)
   .post("/login", userLogin);
 // .delete("/user/:id", userDeleteController)

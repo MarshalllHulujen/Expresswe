@@ -1,6 +1,7 @@
 const Url = require("../database/model/url");
 var validUrl = require("valid-url");
 var shortid = require("shortid");
+const { result } = require("lodash");
 
 exports.UrlController = async (req, res) => {
   const { longUrl } = req.body;
@@ -29,9 +30,11 @@ exports.UrlController = async (req, res) => {
           date: new Date(),
         });
 
+        const Post = { post: url };
+
         url.save();
 
-        res.json(url);
+        res.json(Post);
       }
     } catch (err) {
       console.error(err);
@@ -49,7 +52,8 @@ exports.UrlGetController = async (req, res) => {
     if (url) {
       return res.redirect(url.longUrl);
     } else {
-      return res.status(404).json("No url found");
+      const result = await Url.find();
+      res.send({ data: result });
     }
   } catch (err) {
     console.error(err);
@@ -58,7 +62,11 @@ exports.UrlGetController = async (req, res) => {
 };
 
 exports.UrlGeetController = async (req, res) => {
-  const result = await User.find();
+  const result = await Url.find();
   res.send({ data: result });
+};
 
-}
+exports.UrlDeleteController = async (req, res) => {
+  const result = await Url.deleteMany();
+  res.send({ result });
+};
