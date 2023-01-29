@@ -15,9 +15,11 @@ const User = new mongoose.Schema({
     maxlength: [20, "Lastname length must be 6 to 50 characters"],
   },
   email: { type: String, required: [true, "Email is requireed"] },
-  phone: String,
-  picture: String,
-  dateOfBirth: Date,
+  history: new mongoose.Schema({
+    longUrl: String,
+    shortUrl: String,
+    urlCode: String
+  }),
   registerDate: { type: Date, default: Date.now },
 });
 
