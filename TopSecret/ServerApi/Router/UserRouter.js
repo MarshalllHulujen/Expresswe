@@ -8,8 +8,7 @@ const {
   userDeleteController,
   userLogin,
   UserDeleteController,
-  UserHistoryController,
-  UserPostHistoryController,
+  UserGetIdController,
   UrlGetController
 } = require("../controller/userController");
 
@@ -20,8 +19,7 @@ UserRouter.get("/user", userGetController)
   .post("/login", userLogin)
   .delete("/user", UserDeleteController)
   .post("/user", UserPostController)
-  .get("/:email/history", UserHistoryController)
-  .post("/:email/history", UserPostHistoryController)
+  .get("/user/:email", UserGetIdController)
   // .get("/:code", UrlGetController);
 // .delete("/user/:id", userDeleteController)
 // .get("/userlogin/:email/:password", userLogin);

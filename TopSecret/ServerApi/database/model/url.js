@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const urlSchema = new mongoose.Schema({
+  userid: {type: mongoose.Schema.ObjectId, ref: "User", require: true},
   longUrl: String,
   shortUrl: String,
   urlCode: String,

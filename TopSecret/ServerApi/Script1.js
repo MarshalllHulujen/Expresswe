@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json({ extented: false }));
 
 app.use(UserRouter);
-// app.use(url);
+app.use(url);
 
 // app.get("/users/:id", (req, res) => {ç
 //   res.send(req.query.id);
