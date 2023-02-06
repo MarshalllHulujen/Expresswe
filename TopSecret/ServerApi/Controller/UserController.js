@@ -21,10 +21,10 @@ var shortid = require("shortid");
 //   }
 // };
 
-exports.UserDeleteController = async(req, res) => {
+exports.UserDeleteController = async (req, res) => {
   const result = await User.deleteMany();
-  res.status(200).send({ data: result});
-}
+  res.status(200).send({ data: result });
+};
 
 exports.UserPostController = async (req, res) => {
   try {
@@ -65,7 +65,7 @@ exports.userLogin = async (req, res) => {
     const { email, password } = req.body;
     const result = await User.findOne({ email: email, password: password });
     const token = await TokenGenerator({ uid: result._id, expires: "1d" });
-    res.send({ token: token });
+    res.send({ token: token, _id: result._id });
   } catch (err) {
     res.send(err.message);
   }
@@ -75,7 +75,7 @@ exports.UserGetIdController = async (req, res) => {
   const { email } = req.params;
   const result = await User.findOne({ email: email });
   res.send({ data: result });
-}
+};
 
 // exports.UrlGetController = async (req, res) => {
 //   try {
