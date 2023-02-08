@@ -9,8 +9,8 @@ const {
   userLogin,
   UserDeleteController,
   UserGetIdController,
-  UrlGetController
-} = require("../controller/userController");
+  UrlGetController,
+} = require("../Controller/UserController");
 
 const UserRouter = express.Router();
 
@@ -19,8 +19,8 @@ UserRouter.get("/user", userGetController)
   .post("/login", userLogin)
   .delete("/user", UserDeleteController)
   .post("/user", UserPostController)
-  .get("/user/:email", UserGetIdController)
-  // .get("/:code", UrlGetController);
+  .get("/user/:email", UserGetIdController);
+// .get("/:code", UrlGetController);
 // .delete("/user/:id", userDeleteController)
 // .get("/userlogin/:email/:password", userLogin);
 
