@@ -11,7 +11,7 @@ const {
 
 UrlRouter.post("/url", UrlController)
   .get("/:code", UrlGetController)
-  .get("/url", UrlGeetController)
+  .get("/userurl", UrlGeetController)
   .delete("/url", UrlDeleteController);
 
 module.exports = UrlRouter;

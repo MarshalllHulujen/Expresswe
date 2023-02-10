@@ -6,7 +6,8 @@ exports.UrlController = async (req, res) => {
   const { longUrl } = req.body;
   const { userid } = req.body;
   console.log(longUrl);
-  const baseUrl = "http://localhost:8000";
+  const baseUrl =
+    "https://boginoo-fahterlessgerman-bsha44893-gmailcom.vercel.app";
 
   if (!validUrl.isUri(baseUrl)) {
     return res.status(401).json("Invalid base url");
@@ -63,7 +64,7 @@ exports.UrlGetController = async (req, res) => {
 };
 
 exports.UrlGeetController = async (req, res) => {
-  const { userid } = req.params
+  const { userid } = req.body;
   const result = await Url.findOne({ userid: userid });
   res.send({ data: result });
 };
